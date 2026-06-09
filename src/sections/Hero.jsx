@@ -3,6 +3,10 @@ import { Github, Linkedin } from "@/components/icons";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import { useMemo } from "react";
+import  img  from "/src/assets/sharique.JPG";
+import heroBg from "/src/assets/hero.png";
+import resume from "/public/Sharique_Ahmed_Resume.pdf";
+
 
 const skills = [
   "React",
@@ -22,7 +26,7 @@ export const Hero = () => {
       {/* Bg */}
       <div className="absolute inset-0">
         <img
-          src="/public/hero-bg.jpg"
+          src={heroBg}
           alt="Hero image"
           className="w-full h-full object-cover opacity-40"
         />
@@ -95,7 +99,7 @@ export const Hero = () => {
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
               </a>
-              <a href="/src/assets/Sharique_Ahmed_Resume.docx" >
+              <a href={resume} target="_blank" rel="noopener noreferrer">
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
                 Download CV
@@ -105,7 +109,7 @@ export const Hero = () => {
 
             {/* Social Links */}
                  <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-              <span className="text-sm text-muted-foreground">Follow me: </span>
+              <span className="text-sm text-muted-foregro0und">Follow me: </span>
               {[
                 { icon: Github, href: "https://github.com/sharique-16?tab=overview&from=2026-06-01&to=2026-06-02" },
                 { icon: Linkedin, href: "https://www.linkedin.com/in/sharique-ahmed-sharief-07b300243" },
@@ -123,7 +127,7 @@ export const Hero = () => {
             </div>
           </div>
           {/* Right Column - Profile Image */}
-          <div className="relatice animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300">
             {/* Profile Image */}
             <div className="relative max-w-md mx-auto">
               <div
@@ -134,7 +138,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/src/assets/sharique.JPG"
+                  src={img}
                   alt="sharique ahmed"
                     className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
